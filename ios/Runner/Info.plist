@@ -56,5 +56,13 @@
 	<array>
 		<string>audio</string>
 	</array>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>This app requires access to your music library to play songs.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app requires microphone access for audio visualization features.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app requires access to your photo library to save or load cover art.</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 </dict>
 </plist>
