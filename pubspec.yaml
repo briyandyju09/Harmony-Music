@@ -41,6 +41,7 @@ dependencies:
   file_picker: ^8.0.6
   flutter:
     sdk: flutter
+  flutter_animate: ^4.5.0
   flutter_keyboard_visibility: ^6.0.0
   flutter_lyric: ^2.0.4+6
   flutter_slidable: ^3.1.2
@@ -71,10 +72,7 @@ dependencies:
       ref: b53567a42b4ba3793a3cf00d478bdba0ecce33d7
   smtc_windows: ^0.1.2
   terminate_restart:
-    git:
-      url: https://github.com/anandnet/terminate_restart.git
-      branch: main
-      ref: eb505e07e11d0fe1f5c03993e707c6678428c353
+    path: ./plugins/terminate_restart
   toggle_switch: ^2.1.0
   tray_manager: ^0.2.3
   url_launcher: ^6.2.1
