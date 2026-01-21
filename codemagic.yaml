@@ -11,6 +11,11 @@ workflows:
       - name: Get Flutter dependencies
         script: |
           flutter pub get
+      - name: Patch terminate_restart plugin (Swift fix)
+        script: |
+          # This patches the 'guard let' on non-optional 'engine' which causes build failures in modern Flutter
+          echo "Searching for TerminateRestartPlugin.swift..."
+          find . -name TerminateRestartPlugin.swift -print0 | xargs -0 sed -i '' 's/guard let flutterEngine = flutterViewController.engine else {/let flutterEngine = flutterViewController.engine; if false { \/\/ /g'
       - name: Install CocoaPods
         script: |
           cd ios
@@ -25,7 +30,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - briyandyju@gmail.com # Update this to your email
+          - your_email@example.com # Update this to your email
         notify:
           success: true
           failure: true
